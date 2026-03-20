@@ -17,6 +17,8 @@ set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "" FORCE)
 # Sets a few variables, like PROJECT_NAME.
 project(JucePluginDevelopmentCourseTremoloPlugin)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Set the C++ standard only if this project is standalone;
 # otherwise, let clients decide.
 if(PROJECT_IS_TOP_LEVEL)
@@ -61,19 +63,19 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
 endif()
 
 # Adds a plugin target.
-set(TREMOLO_PLUGIN_NAME "TODO: set your plugin name")
+set(TREMOLO_PLUGIN_NAME "bTremolo")
 juce_add_plugin(
   TremoloCoursePlugin
   PRODUCT_NAME
     ${TREMOLO_PLUGIN_NAME}
   VERSION
-    # TODO: add version
+    0.0.0
   COMPANY_NAME
-    # TODO: add company
+    "lazy608"
   PLUGIN_MANUFACTURER_CODE
-    # TODO: add plugin manufacturer code
+    608
   PLUGIN_CODE
-    # TODO: add plugin code
+    bTrcp
   FORMATS
     Standalone
     AU
