@@ -1,7 +1,6 @@
-#include <tremolo_plugin/include/Tremolo/PluginProcessor.h>
+#include "include/PluginProcessor.h"
 #include <ranges>
 
-namespace tremolo {
 PluginProcessor::PluginProcessor()
     : AudioProcessor(
           BusesProperties()
@@ -9,7 +8,7 @@ PluginProcessor::PluginProcessor()
               .withOutput("Output", juce::AudioChannelSet::stereo(), true)) {}
 
 const juce::String PluginProcessor::getName() const {
-  return TREMOLO_PLUGIN_NAME;
+  return JucePlugin_Name;
 }
 
 bool PluginProcessor::acceptsMidi() const {
@@ -137,10 +136,9 @@ void PluginProcessor::setStateInformation(const void* data, int sizeInBytes) {
 
   // TODO: implement state deserialization from JSON
 }
-}  // namespace tremolo
 
 // This creates new instances of the plugin.
 // This function definition must be in the global namespace.
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter() {
-  return new tremolo::PluginProcessor();
+  return new PluginProcessor();
 }

@@ -1,7 +1,5 @@
-#include <tremolo_plugin/include/Tremolo/PluginProcessor.h>
-#include <tremolo_plugin/include/Tremolo/Parameters.h>
+#include "include/Parameters.h"
 
-namespace tremolo {
 Parameters::Parameters(juce::AudioProcessor& processor)
 // TODO: create parameters
 // TODO: retrieve references to parameters
@@ -9,4 +7,3 @@ Parameters::Parameters(juce::AudioProcessor& processor)
 {
   juce::ignoreUnused(processor);
 }
-}  // namespace tremolo

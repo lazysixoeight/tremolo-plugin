@@ -3,7 +3,6 @@
 #include <juce_audio_processors/juce_audio_processors.h>
 #include <ranges>
 
-namespace tremolo {
 class Tremolo {
 public:
   void prepare(double sampleRate, int expectedMaxFramesPerBlock) {
@@ -37,4 +36,3 @@ public:
 private:
   // You should put class members and private functions here
 };
-}  // namespace tremolo

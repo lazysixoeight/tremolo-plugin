@@ -1,9 +1,8 @@
 #pragma once
 
 #include <juce_audio_processors/juce_audio_processors.h>
-#include <tremolo_plugin/include/Tremolo/Parameters.h>
+#include "Parameters.h"
 
-namespace tremolo {
 class JsonSerializer {
 public:
   static void serialize(const Parameters&, juce::OutputStream&);
@@ -12,4 +11,3 @@ public:
    *           In case of error, no parameters are updated. */
   static juce::Result deserialize(juce::InputStream&, Parameters&);
 };
-}  // namespace tremolo

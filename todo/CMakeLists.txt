@@ -57,11 +57,11 @@ target_compile_definitions(TremoloCoursePlugin
     JUCE_VST3_CAN_REPLACE_VST2=0
 )
 
-juce_add_binary_data(tremolo_plugin_assets
+juce_add_binary_data(PluginAssets
   HEADER_NAME
-    "TremoloPluginAssets.h"
+    "PluginAssets.h"
   NAMESPACE
-    tremolo::assets
+    PluginAssets
   SOURCES
     assets/Background.png
     assets/Logo.png
@@ -70,28 +70,18 @@ juce_add_binary_data(tremolo_plugin_assets
 
 target_sources(TremoloCoursePlugin
   PRIVATE
-    tremolo_plugin/tremolo_plugin.cpp
+    src/CustomLookAndFeel.cpp
+    src/JsonSerializer.cpp
+    src/Parameters.cpp
+    src/PluginEditor.cpp
+    src/PluginProcessor.cpp
 )
-
-add_library(tremolo::tremolo_plugin_assets ALIAS tremolo_plugin_assets)
-
-juce_add_module(tremolo_plugin ALIAS_NAMESPACE tremolo)
-
-# Additional definitions required by all users of this module.
-target_compile_definitions(tremolo_plugin
-  INTERFACE
-    TREMOLO_PLUGIN_NAME="${TREMOLO_PLUGIN_NAME}"
-)
-
-# Enables strict C++ warnings.
-target_compile_options(tremolo_plugin INTERFACE "${PROJECT_WARNINGS_CXX}")
-
-target_link_libraries(tremolo_plugin INTERFACE tremolo::tremolo_plugin_assets)
 
 target_link_libraries(
   TremoloCoursePlugin
   PRIVATE
-    tremolo::tremolo_plugin
+    PluginAssets
+    juce::juce_audio_utils
   PUBLIC
     juce::juce_recommended_config_flags
     juce::juce_recommended_lto_flags

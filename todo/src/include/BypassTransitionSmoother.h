@@ -5,7 +5,6 @@
 #include <cmath>
 #include <ranges>
 
-namespace tremolo {
 /**
  * Class facilitating transition to and from bypassed state over a single block.
  *
@@ -130,4 +129,3 @@ private:
   juce::LinearSmoothedValue<float> wetGain{1.f};
   juce::AudioBuffer<float> dryBuffer;
 };
-}  // namespace tremolo

@@ -1,9 +1,8 @@
 #pragma once
 
 #include <juce_audio_processors/juce_audio_processors.h>
-#include <tremolo_plugin/include/Tremolo/Tremolo.h>
+#include "Tremolo.h"
 
-namespace tremolo {
 class PluginProcessor : public juce::AudioProcessor {
 public:
   PluginProcessor();
@@ -43,4 +42,3 @@ private:
 
   JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PluginProcessor)
 };
-}  // namespace tremolo

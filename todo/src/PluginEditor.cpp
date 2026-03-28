@@ -1,13 +1,12 @@
-#include <tremolo_plugin/include/Tremolo/PluginEditor.h>
-#include <TremoloPluginAssets.h>
+#include "include/PluginEditor.h"
+#include <PluginAssets.h>
 
-namespace tremolo {
 PluginEditor::PluginEditor(PluginProcessor& p) : AudioProcessorEditor(&p) {
   background.setImage(juce::ImageCache::getFromMemory(
-      assets::Background_png, assets::Background_pngSize));
+      PluginAssets::Background_png, PluginAssets::Background_pngSize));
 
   logo.setImage(
-      juce::ImageCache::getFromMemory(assets::Logo_png, assets::Logo_pngSize));
+      juce::ImageCache::getFromMemory(PluginAssets::Logo_png, PluginAssets::Logo_pngSize));
 
   addAndMakeVisible(background);
   addAndMakeVisible(logo);
@@ -24,4 +23,3 @@ void PluginEditor::resized() {
 
   logo.setBounds({16, 16, 105, 24});
 }
-}  // namespace tremolo
