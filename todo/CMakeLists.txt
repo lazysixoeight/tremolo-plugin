@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add the JUCE dependency
 include(FetchContent)
 
-set(FETCHCONTENT_BASE_DIR "${PROJECT_SOURCE_DIR}/lib" CACHE PATH "External dependencies path." FORCE)
+set(FETCHCONTENT_BASE_DIR "${PROJECT_SOURCE_DIR}/libs" CACHE PATH "External dependencies path." FORCE)
 
 FetchContent_Declare(juce
   GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
