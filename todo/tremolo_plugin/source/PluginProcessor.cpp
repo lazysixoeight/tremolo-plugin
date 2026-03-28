@@ -1,3 +1,5 @@
+#include <tremolo_plugin/include/Tremolo/PluginProcessor.h>
+#include <ranges>
 
 namespace tremolo {
 PluginProcessor::PluginProcessor()

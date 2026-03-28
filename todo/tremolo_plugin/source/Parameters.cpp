@@ -1,3 +1,5 @@
+#include <tremolo_plugin/include/Tremolo/PluginProcessor.h>
+#include <tremolo_plugin/include/Tremolo/Parameters.h>
 
 namespace tremolo {
 Parameters::Parameters(juce::AudioProcessor& processor)

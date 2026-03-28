@@ -1,5 +1,8 @@
 #pragma once
 
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <tremolo_plugin/include/Tremolo/Tremolo.h>
+
 namespace tremolo {
 class PluginProcessor : public juce::AudioProcessor {
 public:

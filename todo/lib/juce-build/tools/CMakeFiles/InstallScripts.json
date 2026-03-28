@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/lazy/devbuild/tremolo-plugin/todo/lib/juce-build/tools/cmake_install.cmake",
+		"/home/lazy/devbuild/tremolo-plugin/todo/lib/juce-build/tools/modules/cmake_install.cmake",
+		"/home/lazy/devbuild/tremolo-plugin/todo/lib/juce-build/tools/extras/Build/cmake_install.cmake",
+		"/home/lazy/devbuild/tremolo-plugin/todo/lib/juce-build/tools/extras/Build/juceaide/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

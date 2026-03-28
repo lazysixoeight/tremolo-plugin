@@ -1,3 +1,6 @@
+#include <tremolo_plugin/include/Tremolo/JsonSerializer.h>
+#include <tremolo_plugin/include/Tremolo/Parameters.h>
+
 namespace tremolo {
 void JsonSerializer::serialize(const Parameters& parameters,
                                juce::OutputStream& output) {

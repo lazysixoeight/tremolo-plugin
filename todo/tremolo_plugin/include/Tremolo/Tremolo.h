@@ -1,5 +1,8 @@
 #pragma once
 
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <ranges>
+
 namespace tremolo {
 class Tremolo {
 public:

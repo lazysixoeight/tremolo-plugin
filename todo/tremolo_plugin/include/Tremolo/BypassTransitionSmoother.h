@@ -1,5 +1,10 @@
 #pragma once
 
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <juce_dsp/juce_dsp.h>
+#include <cmath>
+#include <ranges>
+
 namespace tremolo {
 /**
  * Class facilitating transition to and from bypassed state over a single block.
